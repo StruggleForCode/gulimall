@@ -50,6 +50,13 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * 			spring.cloud.nacos.config.group=1111
  * 	每个微服务创建自己的命名空间，使用配置分组区分环境，alpha,gamma,prod
  *
+ * 	3. 同时加载多个配置集
+ * 	1）、微服务任何配置信息，任何配置文件都可以放到配置中心中
+ * 	2）、只需要在bootstrap.properties说明加载配置中心中那些配置文件即可
+ * 	3）、@Value. @ConfigurationProperties.....
+ * 	以前SpringBoot任何方法从配置文件中获取值，都能使用
+ * 	配置中心有， 优先使用配置中心的值
+ *
  */
 @MapperScan("com.atiguigu.gulimall.coupon.dao")
 @SpringBootApplication
